@@ -11,15 +11,21 @@ body{
 }
 
 .sidebar{
-    background-color: rgb(0, 162, 255);
+    background-color: #0275d8 ;
     color: white;
     grid-column: 1/2;
     z-index: 50;
+    position: fixed;
+    width: 270px;
+    height: 100%;
 }
 
 main{
     grid-column: 2/3;
     z-index: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 11fr;
 }
 
 .topbar{
@@ -34,14 +40,14 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:3rem;
+    gap: 2rem;
 }
 
 .search,
 .user{
     display: flex;
     align-items: center;
-    gap:1.5rem;
+    gap:1.2rem;
 }
 
 .content,
@@ -66,7 +72,7 @@ main{
 }
 
 .sidebar ul {
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 li>a{
@@ -121,8 +127,7 @@ li>a>svg{
 }
 
 .project{
-    border-left: 0.8rem solid blue;
-    border-left-style: inset;
+    border-left: 0.8rem solid #f0ad4e ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -183,18 +188,116 @@ li p {
     max-width: 75%;
 }
 
+.search>svg{
+    min-width: 24px;
+}
+
 .search-input{
     all: unset;
     background-color: rgb(230, 235, 240);
     padding: 0.5rem 1rem;
     border-radius: 0.65rem;
     width: 100%;
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid #0275d8 ;
     transition: all 0.15s;
 }
 
 .search-input:focus{
     background-color: rgb(197, 201, 206);
     border-radius: 1rem;
-    border-bottom: 3px solid yellow;
+    border-bottom: 3px solid #f0ad4e ;
+}
+
+.text > * {
+    margin: 0.25rem auto;
+}
+
+.text >p:first-of-type{
+    color: black;
+}
+
+.trending li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trending ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+h2{
+    margin-bottom: 0.75rem;
+}
+
+.row1{
+    padding-top: 1rem;
+}
+
+.buttons{
+    display: flex;
+    gap: 1.2rem;
+    flex-grow: 0;
+}
+
+.cool-btn{
+    all:unset;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 3px rgb(161, 161, 161);
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: #0275d8;
+    transition: all 0.1s ease-out;
+    user-select: none;
+}
+
+.cool-btn:hover{
+    color: white;
+    background-color: #0765b8;
+    box-shadow: 3px 3px 4px grey;
+}
+
+.cool-btn:active{
+    color: white;
+    background-color: #035094;
+    box-shadow: 2px 2px 3px rgb(161, 161, 161);
+}
+
+.project-buttons{
+    display: flex;
+    gap: 1rem;
+    color: rgba(0,0,0,0.6);
+}
+
+.project-buttons > *:hover{
+    color: black;
+}
+
+.project-buttons > *,
+.bell{
+    transition: all 0.2s ease-out;
+}
+
+.bell:hover{
+    transform: rotate(30deg);
+    transform-origin: 50% 50%;
+}
+
+.bell:active{
+    transform: scale(0.8);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding-inline: 24px;
+    gap:16px;
+}
+
+.dash-icon >svg {
+    transform: scale(2);
 }
