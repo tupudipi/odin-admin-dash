@@ -29,36 +29,34 @@ main{
     padding: 0 2rem;
 }
 
-.row1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-.user{
-    display: flex;
-    align-items: center;
-    gap:2rem;
-}
-
+.row1,
 .row2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap:3rem;
+}
+
+.search,
+.user{
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+}
+
+.content,
+.projects{
+    display: grid;
+    gap:20px;
 }
 
 .content{
-    display: grid;
-    gap:20px;
     grid-template-columns: 3fr 1fr;
     padding: 1rem;
 }
 
 .projects{
     grid-column: 1/2;
-    display: grid;
-    gap:20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -127,6 +125,7 @@ li>a>svg{
     border-left-style: inset;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-buttons{
@@ -177,4 +176,25 @@ li p {
 
 .buttons{
     height: 100%;
+}
+
+.search{
+    width: 100%;
+    max-width: 75%;
+}
+
+.search-input{
+    all: unset;
+    background-color: rgb(230, 235, 240);
+    padding: 0.5rem 1rem;
+    border-radius: 0.65rem;
+    width: 100%;
+    border-bottom: 3px solid blue;
+    transition: all 0.15s;
+}
+
+.search-input:focus{
+    background-color: rgb(197, 201, 206);
+    border-radius: 1rem;
+    border-bottom: 3px solid yellow;
 }
