@@ -21,9 +21,11 @@ const trendingContent = document.querySelector('.trending-content');
 
 announcementsBtn.addEventListener('click', () => {
     announcementsContent.classList.toggle('show');
+    announcementsBtn.classList.toggle('flipped');
 });
 
 trendingBtn.addEventListener('click', () => {
     trendingContent.classList.toggle('show');
+    trendingBtn.classList.toggle('flipped');
 });
 
